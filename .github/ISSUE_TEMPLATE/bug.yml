@@ -1,0 +1,59 @@
+name: Bug report
+description: Something in Everchat doesn't work as it should.
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen
+      description: The steps that lead to it, if you know them.
+      placeholder: |
+        1. Open a tab's right-click menu
+        2. ...
+  - type: input
+    id: version
+    attributes:
+      label: Everchat version
+      description: Type /everchat help in the chat, or look in Options > AddOns > Everchat.
+      placeholder: "0.51.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Game language
+      options:
+        - English
+        - Spanish
+        - French
+        - German
+        - Portuguese
+        - Italian
+        - Russian
+        - Korean
+        - Chinese
+    validations:
+      required: true
+  - type: textarea
+    id: error
+    attributes:
+      label: Error text
+      description: If the game showed a Lua error, paste it here. BugSack keeps errors to copy, or type /console scriptErrors 1 in the chat to see them.
+      render: text
+  - type: input
+    id: addons
+    attributes:
+      label: Other chat or interface addons
+      description: For example ElvUI, Prat, Chattynator or WIM.
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag images here if they help show it.
